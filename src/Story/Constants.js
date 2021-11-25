@@ -1,0 +1,12 @@
+export const TEXT = "text";
+export const NEXT_ID = "nextId";
+export const WAIT_TIME = "wait";
+export const IS_NEXT_DISABLED = "disableNext";
+export const BUTTONS = "buttons";
+export const BUTTON_CALLBACK = "buttons";
+export const START_VALUE = "start";
+export const END_VALUE = "end";
+export const STEP_VALUE = "start";
+export const RANGE = "slider";
+export const RESPONSES = "responses"
+export const ANSWER = "answer"
