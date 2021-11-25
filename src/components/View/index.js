@@ -1,19 +1,12 @@
-import React, { createRef, useEffect, useState } from "react";
-import Typewriter from "typewriter-effect";
+import React, { createRef } from "react";
 import Bleh from "../Bleh";
 
 //Styles
-import { Wrapper, Content, Text } from "./View.styles";
+import { Wrapper, Content } from "./View.styles";
 
 const View = ({text, nextCallback, disableNext}) => {
 
-    const [isLoading, setIsLoading] = useState(true);
     const box = createRef(null);
-
-    const animate = () => {
-        console.log("Changed");
-        box.current.className = "animate";
-    }
 
     return (
         <Wrapper>
