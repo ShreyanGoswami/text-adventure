@@ -6,8 +6,6 @@ import { Wrapper, Content } from "./View.styles";
 
 const View = ({text, nextCallback, disableNext}) => {
 
-    const box = createRef(null);
-
     return (
         <Wrapper>
             <Content>
