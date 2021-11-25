@@ -7,11 +7,12 @@ import Slider from "../Slider";
 // Styles
 import { Wrapper, Content } from "./Interaction.styles";
 
-const Interaction = ({id, buttons, range, buttonCallback, handleSlider, nextCallback}) => {
+const Interaction = ({playerId, id, buttons, range, buttonCallback, handleSlider, nextCallback}) => {
     return (
         <Wrapper>
             <Content>
             <InteractiveButtons
+                playerId={playerId}
                 id={id}
                 buttons={buttons !== undefined ? buttons: {}}
                 callback={buttonCallback}
