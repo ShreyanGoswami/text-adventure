@@ -11,7 +11,7 @@ import Interaction from "../Interaction";
 import { Wrapper, Content } from "./Story.styles";
 
 //Functions
-import { handleDecision, handleSlider } from "../../Story/Story";
+import { handleDecision, handleSlider, onStoryCompletion } from "../../Story/Story";
 
 const StoryPlayer = ({ playerId, story }) => {
 
@@ -20,33 +20,26 @@ const StoryPlayer = ({ playerId, story }) => {
     const moveToNext = (nextId) => {
         if (nextId === undefined) {
             const newIndex = story[getIndexBasedOnId(currentStoryIndex, story)][NEXT_ID];
-            setCurrentStoryIndex(newIndex);
+            if (story[getIndexBasedOnId(newIndex, story)][NEXT_ID] === -1) {
+                // check if this is the last panel
+                onStoryCompletion();
+            }
+            else {
+                setCurrentStoryIndex(newIndex);
+            }
         } else {
             setCurrentStoryIndex(nextId);
         }
-        
+
     }
 
     const getIndexBasedOnId = (id, story) => {
-        for (let i=0;i<story.length;i++) {
+        for (let i = 0; i < story.length; i++) {
             if (story[i]["id"] === id) {
                 return i;
             }
         }
     }
-    // useEffect(() => {
-    //     let timeout;
-    //     if (currentStoryIndex > -1 && currentStoryIndex <= story.length - 1) {
-    //         const newIndex = story[currentStoryIndex][NEXT_ID];
-    //         const wait = story[newIndex][WAIT_TIME];
-    //         timeout = setTimeout(() => setCurrentStoryIndex(newIndex), wait);
-    //     } else {
-    //         setCurrentStoryIndex(() => 0)
-    //     }
-    //     return () => {
-    //         clearTimeout(timeout);
-    //     };
-    // }, [currentStoryIndex, story, story.length]);
 
     return (
         <Wrapper>
@@ -56,7 +49,7 @@ const StoryPlayer = ({ playerId, story }) => {
                     nextCallback={moveToNext}
                     disableNext={story[getIndexBasedOnId(currentStoryIndex, story)][IS_NEXT_DISABLED]}></View>
                 <Interaction
-                    playerId={playerId} 
+                    playerId={playerId}
                     id={currentStoryIndex}
                     buttons={story[getIndexBasedOnId(currentStoryIndex, story)][BUTTONS]}
                     buttonCallback={handleDecision}

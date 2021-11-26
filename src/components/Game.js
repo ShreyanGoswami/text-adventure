@@ -11,11 +11,7 @@ import { Wrapper } from "./Game.styles";
 //main story
 import Story from './../Story/Story';
 
-const Game = () => {
-
-    const playerId = Math.floor(Math.random()*100000);
-
-    console.log("Player id " + playerId);
+const Game = ({playerId}) => {
 
     return (<Wrapper>
     <Header title="Welcome to the climate change game"></Header>

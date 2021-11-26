@@ -1,17 +1,18 @@
 import { RESPONSES, ANSWER, TEXT } from "./Constants";
+import API from "../API";
 
 const Story = [
     {
         "id": 0,
         "text": "Rick and Morty tumbled out of the portal onto what looks like a hot and deserted beach. As they stand on the coast it's quiet and the wind is dry. Morty turns towards Rick, “Ooo Rick where have you taken us?”. Rick checks his intergalactic map. “Its Earth”, he says, his voice a bit grimmer than usual.",
-        "nextId": 1.5,
+        "nextId": 0.5,
         "buttons": [],
         "slider": {},
         "disableNext": false
     },
     {
-        "id": 1.5,
-        "nextId": 2,
+        "id": 0.5,
+        "nextId": 1,
         "text": "“But..but Rick this can’t be earth. It’s way too hot!”, Morty exclaims.“Its earth alright” says Rick handing Morty the map. “We were supposed to travel a hundred light years away from earth but it looks like I set the setting to hundred years away”. A rookie mistake. While Morty tries to read the intergalactic map, Rick thinks it's a good time to teach Morty a little bit of science.",
         "buttons": [],
         "slider": {},
@@ -199,8 +200,8 @@ const Story = [
     {
         "id": 18,
         "text": "Thank you for taking the time in going through this interactive story. I hope it was informative and useful for you.",
-        "nextId": 0,
-        "disableNext": false,
+        "nextId": -1,
+        "disableNext": true,
         "slider": {},
         "buttons": []
     },
@@ -278,7 +279,7 @@ const Story = [
     },
 ];
 
-const result = []
+const result = [{"playerId":123, "storyId":22, "answer":1, status:true}];
 
 export const handleDecision = (playerId, storyId, value, nextCallback) => {
     const index = getIndexBasedOnId(storyId);
@@ -287,14 +288,14 @@ export const handleDecision = (playerId, storyId, value, nextCallback) => {
     if (answer === value) {
         for (let i = 0; i < res.length; i++) {
             if (res[i]["status"] === "correct") {
-                result.push({ "playerId": playerId, "id": storyId, "answer": value, "status": true });
+                result.push({ "playerId": playerId, "storyId": storyId, "answer": value, "status": true });
                 nextCallback(res[i]["id"]);
             }
         }
     } else {
         for (let i = 0; i < res.length; i++) {
             if (res[i]["status"] === "incorrect") {
-                result.push({ "playerId": playerId, "id": storyId, "answer": value, "status": false });
+                result.push({ "playerId": playerId, "storyId": storyId, "answer": value, "status": false });
                 nextCallback(res[i]["id"]);
             }
         }
@@ -319,6 +320,14 @@ export const handleSlider = (id, value) => {
             }
         }
 
+    }
+}
+
+export const onStoryCompletion =  async () => {
+    try {
+        API.storeResults(result);
+    } catch (error) {
+        console.log(error);
     }
 }
 
