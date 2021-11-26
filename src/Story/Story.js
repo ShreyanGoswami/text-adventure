@@ -204,7 +204,7 @@ const Story = [
     },
     {
         "id": 12,
-        "text": "“Now Morty, imagine what we did for the water in this packet for the entire ocean,” says Rick. “Gee Rick we will need a very big element gun.” Morty says in a bit of wonder. “Yeah we might have to rob an entire planet of their resources to clean our oceans.” Rick takes the packet from Morty and empties its contents.”Rick what was that for?!” “Oh we can’t eat that thing Morty, inedible for most humans, I got used to it. Effectively poison”. “Just like the ocean water?” Morty asks",
+        "text": "“Now Morty, imagine what we did for the water in this packet for the entire ocean,” says Rick. “Gee Rick we will need a very big element gun.” Morty says in a bit of wonder. “Yeah we might have to rob an entire planet of their resources to clean our oceans.” Rick takes the packet from Morty and empties its contents.”Rick what was that for?!” “Oh we can’t eat that thing Morty, inedible for most humans, I got used to it. Its poison for you Morty”. “Just like the ocean water?” Morty asks",
         "nextId": 13,
         "disableNext": false,
         "slider": {},
@@ -212,7 +212,7 @@ const Story = [
     },
     {
         "id": 13,
-        "text": "“Yes, just like the ocean..ocean water. Come on Morty, I have had enough of this Morty, let’s get back.” Rick says his shoulders are a bit more slumped than usual. “But wait Rick,if this is the future, why go back at all?” ",
+        "text": "“Yes, just like the ocean..ocean water. Come on, I have had enough of this Morty, let’s get back.” Rick says his shoulders are a bit more slumped than usual. “But wait Rick,if this is the future, why go back at all?” ",
         "nextId": 14,
         "disableNext": false,
         "slider": {},
@@ -244,7 +244,7 @@ const Story = [
     },
     {
         "id": 17,
-        "text": "The oceans are doing a lot of heavy lifting, absorbing the carbon dioxide and reducing keeping global warming in check. In this process they are becoming more acidic. The increased temperature releases oxygen from the oceans. The increased temperatures has the potential to slowly release carbon dioxide back into the atmosphere increasing global temperatures. Scientists estimate that if nothing is done then in another 100 years the temperatures would rise by four degrees or more globally.",
+        "text": "The oceans are doing a lot of heavy lifting, absorbing the carbon dioxide and reducing keeping global warming in check. In this process they are becoming more acidic. The increased temperature releases oxygen from the oceans. There is also the potential for oceans to release carbon dioxide back into the atmosphere increasing global temperatures. Scientists estimate that if nothing is done then in another 100 years the temperatures would rise by four degrees or more globally.",
         "nextId": 18,
         "disableNext": false,
         "slider": {},
