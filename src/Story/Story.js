@@ -40,8 +40,8 @@ const Story = [
         "nextId": 4,
         "disableNext": true,
         "slider": {
-            "start": 1000,
-            "end": 8000,
+            "start": 1000.0,
+            "end": 8000.0,
             "step": 1000,
             "condition": "geq"
         },
@@ -94,7 +94,7 @@ const Story = [
         "id": 7.5,
         "text" : "Increase the oxygen concentration by pressing the + and decrease it using -. Press the try it button to check if it's enough.",
         "slider": {
-            "start": 50,
+            "start": 50.0,
             "end": 300,
             "step": 50,
             "condition": "geq"
@@ -153,8 +153,8 @@ const Story = [
         "nextId": 81,
         "disableNext": true,
         "slider": {
-            "start": 8,
-            "end": 9,
+            "start": 8.0,
+            "end": 9.0,
             "step": 0.1,
             "condtion": "eq"
         },
@@ -360,8 +360,19 @@ export const handleSlider = (id, value) => {
     const index = getIndexBasedOnId(id);
     const res = Story[index][RESPONSES];
     const answer = Number(Story[index][ANSWER]).toFixed(1);
-    const condition = Story[index][RANGE]["condtion"];
+    const condition = Story[index][RANGE]["condition"];
 
+    switch (condition) {
+        case 'eq':
+            return handleEqualCondition(value, answer, res);
+        case 'geq':
+            return handleGreatherThanOrEqualCondition(value, answer, res)
+        default:
+            return handleEqualCondition(value, answer, res);
+    }
+}
+
+const handleEqualCondition = (value, answer, res) => {
     if (value === answer) {
         for (let i = 0; i < res.length; i++) {
             if (res[i]["status"] === "correct") {
@@ -374,7 +385,22 @@ export const handleSlider = (id, value) => {
                 return [false, Story[getIndexBasedOnId(res[i]["id"])][TEXT]]
             }
         }
+    }
+}
 
+const handleGreatherThanOrEqualCondition = (value, answer, res) => {
+    if (value >= answer) {
+        for (let i = 0; i < res.length; i++) {
+            if (res[i]["status"] === "correct") {
+                return [true, res[i]["id"]];
+            }
+        }
+    } else {
+        for (let i = 0; i < res.length; i++) {
+            if (res[i]["status"] !== "correct") {
+                return [false, Story[getIndexBasedOnId(res[i]["id"])][TEXT]]
+            }
+        }
     }
 }
 
