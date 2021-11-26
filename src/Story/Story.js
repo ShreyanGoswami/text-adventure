@@ -279,7 +279,7 @@ const Story = [
     },
 ];
 
-const result = [{"playerId":123, "storyId":22, "answer":1, status:true}];
+const result = [];
 
 export const handleDecision = (playerId, storyId, value, nextCallback) => {
     const index = getIndexBasedOnId(storyId);
