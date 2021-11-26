@@ -31,9 +31,9 @@ export const Content = styled.div`
 export const Text = styled.div`
     text-align: center;
     margin-top: 25px;
-    margin-left:5px;
-    margin-right:5px;
+    padding-bottom:20px;
     word-wrap: break-word;
-    width: 100%;
-
+    width: 80%;
+    text-align: justify;
+    text-justify: inter-word;
 `
