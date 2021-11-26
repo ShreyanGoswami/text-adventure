@@ -3,10 +3,10 @@ import React from "react";
 //Styles
 import { Wrapper } from "./InteractiveButtons.styles";
 
-const InteractiveButtons = ({ id, buttons, callback, nextCallback }) => {
+const InteractiveButtons = ({playerId, id, buttons, callback, nextCallback }) => {
 
     const handleButtonClicked = e => {
-        callback(id, e.target.value, nextCallback);
+        callback(playerId, id, e.target.value, nextCallback);
     }
 
     const buttonList = []

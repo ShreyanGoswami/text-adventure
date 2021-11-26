@@ -10,9 +10,9 @@ const Story = [
         "disableNext": false
     },
     {
-        "id":1.5,
-        "nextId":2,
-        "text":"“But..but Rick this can’t be earth. It’s way too hot!”, Morty exclaims.“Its earth alright” says Rick handing Morty the map. “We were supposed to travel a hundred light years away from earth but it looks like I set the setting to hundred years away”. A rookie mistake. While Morty tries to read the intergalactic map, Rick thinks it's a good time to teach Morty a little bit of science.",
+        "id": 1.5,
+        "nextId": 2,
+        "text": "“But..but Rick this can’t be earth. It’s way too hot!”, Morty exclaims.“Its earth alright” says Rick handing Morty the map. “We were supposed to travel a hundred light years away from earth but it looks like I set the setting to hundred years away”. A rookie mistake. While Morty tries to read the intergalactic map, Rick thinks it's a good time to teach Morty a little bit of science.",
         "buttons": [],
         "slider": {},
         "disableNext": false
@@ -31,7 +31,7 @@ const Story = [
         "nextId": 3,
         "disableNext": false,
         "slider": {},
-        "buttons": []    
+        "buttons": []
     },
     {
         "id": 3,
@@ -45,7 +45,7 @@ const Story = [
         },
         "buttons": [],
         "answer": 5000,
-        "responses" : [{"status":"correct", "id":4}, {"status":"incorrect", "id":108}]
+        "responses": [{ "status": "correct", "id": 4 }, { "status": "incorrect", "id": 108 }]
     },
     {
         "id": 4,
@@ -280,21 +280,21 @@ const Story = [
 
 const result = []
 
-export const handleDecision = (id, value, nextCallback) => {
-    const index = getIndexBasedOnId(id);
+export const handleDecision = (playerId, storyId, value, nextCallback) => {
+    const index = getIndexBasedOnId(storyId);
     const res = Story[index][RESPONSES];
     const answer = Story[index][ANSWER];
     if (answer === value) {
         for (let i = 0; i < res.length; i++) {
             if (res[i]["status"] === "correct") {
-                result.push({ "id": id, "answer": value, "status": true });
+                result.push({ "playerId": playerId, "id": storyId, "answer": value, "status": true });
                 nextCallback(res[i]["id"]);
             }
         }
     } else {
         for (let i = 0; i < res.length; i++) {
             if (res[i]["status"] === "incorrect") {
-                result.push({ "id": id, "answer": value, "status": false });
+                result.push({ "playerId": playerId, "id": storyId, "answer": value, "status": false });
                 nextCallback(res[i]["id"]);
             }
         }

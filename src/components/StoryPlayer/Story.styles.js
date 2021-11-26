@@ -11,7 +11,8 @@ export const Content = styled.div`
     margin-left: 80px;
     margin-right: 80px;
     border-radius: 30px;
-    height: 87.9vh;
+    margin-bottom: 0px;
+    height: 77vh;
     display:flex;
     flex-direction: column;
     align-items: center;

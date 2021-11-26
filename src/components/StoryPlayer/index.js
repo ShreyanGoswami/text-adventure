@@ -13,7 +13,7 @@ import { Wrapper, Content } from "./Story.styles";
 //Functions
 import { handleDecision, handleSlider } from "../../Story/Story";
 
-const StoryPlayer = ({ story }) => {
+const StoryPlayer = ({ playerId, story }) => {
 
     const [currentStoryIndex, setCurrentStoryIndex] = useState(0);
 
@@ -55,7 +55,8 @@ const StoryPlayer = ({ story }) => {
                     text={story[getIndexBasedOnId(currentStoryIndex, story)][TEXT]}
                     nextCallback={moveToNext}
                     disableNext={story[getIndexBasedOnId(currentStoryIndex, story)][IS_NEXT_DISABLED]}></View>
-                <Interaction 
+                <Interaction
+                    playerId={playerId} 
                     id={currentStoryIndex}
                     buttons={story[getIndexBasedOnId(currentStoryIndex, story)][BUTTONS]}
                     buttonCallback={handleDecision}
