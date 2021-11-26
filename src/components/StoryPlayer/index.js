@@ -22,6 +22,7 @@ const StoryPlayer = ({ playerId, story }) => {
             const newIndex = story[getIndexBasedOnId(currentStoryIndex, story)][NEXT_ID];
             if (story[getIndexBasedOnId(newIndex, story)][NEXT_ID] === -1) {
                 // check if this is the last panel
+                setCurrentStoryIndex(newIndex);
                 onStoryCompletion();
             }
             else {
