@@ -91,8 +91,24 @@ const Story = [
         "buttons": [],
     },
     {
+        "id": 7.2,
+        "text": "But..but Rick, how did the ocean lose oxygen in the first place? Morty asked",
+        "nextId": 7.4,
+        "disableNext": false,
+        "slider": {},
+        "buttons": [],
+    },
+    {
+        "id": 7.4,
+        "text": "It's a cycle Morty, a complicated one but here is the gist. The increased temperature caused by global warming is releasing oxygen back into the atomosphere.",
+        "nextId": 7.5,
+        "disableNext": false,
+        "slider": {},
+        "buttons": [],
+    },
+    {
         "id": 7.5,
-        "text" : "Increase the oxygen concentration by pressing the + and decrease it using -. Press the try it button to check if it's enough.",
+        "text" : "Now let's inject some oxygen back into the water. Increase the oxygen concentration by pressing the + and decrease it using -. Press the try it button to check if it's enough.",
         "slider": {
             "start": 50.0,
             "end": 300,
@@ -107,7 +123,15 @@ const Story = [
     },
     {
         "id": 8,
-        "text": "“Alright Morty, we still need to do another thing. Apart from the oxygen, the water..the water is too acidic.” Rock says. “Rick, how did the entire ocean water become like this?” asked Morty. “Can you take a guess, Morty? It has to do with another element that is mixed in the water”",
+        "text": "“Alright Morty, that should be enough oxygen. We still need to do another thing. Apart from the oxygen, the water..the water is too acidic.” Rick says. ”",
+        "nextId": 9,
+        "disableNext": false,
+        "slider": {},
+        "buttons": []
+    },
+    {
+        "id": 9,
+        "text": "“Rick, how did the entire ocean water become like this?” asked Morty. “Can you take a guess, Morty? It has to do with another element that is mixed in the water”",
         "nextId": 10,
         "disableNext": true,
         "slider": {},
@@ -118,25 +142,25 @@ const Story = [
         "responses": [{ "status": "correct", "id": 104 }, { "status": "incorrect", "id": 105 }],
         "answer": "3"
     },
-    // {
-    //     "id": 9,
-    //     "text": "“But Rick, what has acidity in the ocean.” ",
-    //     "nextId": 10,
-    //     "disableNext": false,
-    //     "slider": {},
-    //     "buttons": []
-    // },
     {
         "id": 10,
-        "text": "“You see Morty, the ocean is about eight times better at absorbing carbon dioxide than oxygen. We are releasing carbon dioxide into the atmosphere by burning petrol, diesel and coal in our cars and factories. In our timeline, the ocean was absorbing three billion tons of carbon into the atmosphere every year. Before we had all these technologies, before the 1900s the ocean would be releasing carbon dioxide but not anymore.“ Rick explained",
+        "text": "“Morty, the ocean is about eight times better at absorbing carbon dioxide than oxygen. We are releasing carbon dioxide into the atmosphere by burning petrol, diesel and coal in our cars and factories. In our timeline, the ocean was absorbing three billion tons of carbon dioxide from the atmosphere every year. Before the 1900s the ocean would be releasing carbon dioxide but not anymore. Not after we invented cars, aeroplanes and factories“ Rick explained",
+        "nextId": 10.5,
+        "disableNext": false,
+        "slider": {},
+        "buttons": []
+    },
+    {
+        "id": 10.5,
         "nextId": 80,
+        "text": "“I see Rick. So the carbon dioxide we release into the atmosphere is increasing the temperatures graudally.“ Morty commented" ,
         "disableNext": false,
         "slider": {},
         "buttons": []
     },
     {
         "id": 80,
-        "text": "“The carbon dioxide decomposes in the ocean water to form cabonic acid and release hydrogen. Do you know what happens when hydrogen is released?“ asked Rick",
+        "text": "“Yes Morty and not only that, the carbon dioxide decomposes in the ocean water and release hydrogen. Do you know what happens when hydrogen is released?“ asked Rick",
         "nextId": 11,
         "disableNext": true,
         "slider": {},
@@ -149,7 +173,7 @@ const Story = [
     },
     {
         "id": 11,
-        "text": "The acid in the ocean is carbonic acid, the thing you find in sodas”. On queue Rick lets out a big burp. “So the ocean has become a very big soda can?” Morty asks. “Yes you can think of it in that way. Now adjust the dial to remove the acid” Rick says. “Remember Morty, the higher the value on the scale the less acidic it becomes.”",
+        "text": "The acid in the ocean is carbonic acid, the thing you find in sodas”. On queue Rick lets out a big burp. “When the ocean becomes acidic it harms most of the life in the oceans.“ Rick added. “So the ocean has become a very big soda can?” Morty asks. “Yes you can think of it in that way. Now adjust the dial to remove the acid” Rick says. “Remember Morty, the higher the value on the scale the less acidic it becomes. But don't set it too high as then the water will become less acidic.”",
         "nextId": 81,
         "disableNext": true,
         "slider": {
@@ -164,7 +188,7 @@ const Story = [
     },
     {
         "id": 81,
-        "text": "“Oh.. Rick how else does carbon get into oceans?“ Morty asked",
+        "text": "“Oh.. Rick I wanted to know, how else does carbon get into oceans?“ Morty asked",
         "nextId":82,
         "disableNext": false,
         "slider": {},
@@ -180,7 +204,7 @@ const Story = [
     },
     {
         "id": 12,
-        "text": "“Now Morty, imagine doing this for the entire ocean,” says Rick. “Gee Rick we will need a lot more of your element gun.” Morty says in a bit of wonder. “Yeah we might have to rob an entire planet of their resources to clean our oceans.” Rick takes the packet from Morty and empties its contents.”Rick what was that for?!” “Oh we can’t eat that thing Morty, inedible for most humans, I got used to it. Effectively poison”. “Just like the ocean water?” Morty asks",
+        "text": "“Now Morty, imagine what we did for the water in this packet for the entire ocean,” says Rick. “Gee Rick we will need a very big element gun.” Morty says in a bit of wonder. “Yeah we might have to rob an entire planet of their resources to clean our oceans.” Rick takes the packet from Morty and empties its contents.”Rick what was that for?!” “Oh we can’t eat that thing Morty, inedible for most humans, I got used to it. Its poison for you Morty”. “Just like the ocean water?” Morty asks",
         "nextId": 13,
         "disableNext": false,
         "slider": {},
@@ -188,7 +212,7 @@ const Story = [
     },
     {
         "id": 13,
-        "text": "“Yes, just like the ocean..ocean water. I have had enough of this Morty, let’s get back. It’s depressing to look at this” Rick says his shoulders are a bit slumped, more slumped than usual. “But wait Rick,if this is the future, why go back at all?” ",
+        "text": "“Yes, just like the ocean..ocean water. Come on, I have had enough of this Morty, let’s get back.” Rick says his shoulders are a bit more slumped than usual. “But wait Rick,if this is the future, why go back at all?” ",
         "nextId": 14,
         "disableNext": false,
         "slider": {},
@@ -196,7 +220,7 @@ const Story = [
     },
     {
         "id": 14,
-        "text": "“No Morty, the future we see here is one of the possible outcomes. When we time travel we are split into multiple copies, equal to the number of possibilities. We are not experiencing one of them.” Rick explains ",
+        "text": "“No Morty, the future we see here is one of the possible outcomes. When we time travel we are split into multiple copies, equal to the number of possibilities. We are experiencing one of them.” Rick explains ",
         "nextId": 15,
         "disableNext": false,
         "slider": {},
@@ -220,7 +244,7 @@ const Story = [
     },
     {
         "id": 17,
-        "text": "The oceans are doing a lot of heavy lifting, absorbing the carbon dioxide and reducing keeping global warming in check. Scientists right now are trying to figure out how long as will thins continue. The increased temperatures has the potential to slowly release carbon dioxide back into the atmosphere increasing global temperatures. Scientists estimate that if nothing is done then in another 100 years the temperatures would ruse by four degrees or more globally.",
+        "text": "The oceans are doing a lot of heavy lifting, absorbing the carbon dioxide and reducing keeping global warming in check. In this process they are becoming more acidic. The increased temperature releases oxygen from the oceans. There is also the potential for oceans to release carbon dioxide back into the atmosphere increasing global temperatures. Scientists estimate that if nothing is done then in another 100 years the temperatures would rise by four degrees or more globally.",
         "nextId": 18,
         "disableNext": false,
         "slider": {},
@@ -228,7 +252,7 @@ const Story = [
     },
     {
         "id": 18,
-        "text": "Individually we can all reduce the carbon we release by making environmental friendly decisions. But we also need to do it on a larger scale by pushing our communities and leaders to make the right decision for the environment. If ever you are in a position to choose, choose the one that ends up releasing less carbon into the atmosphere. It will be a win for everyone in the long term.",
+        "text": "Individually we can all reduce the carbon we release by making environmental friendly decisions. But that is not enough. We need to do it on a larger scale by pushing our communities and leaders to make the right decision for the environment. If ever you are in a position to choose, choose the one that ends up releasing less carbon into the atmosphere. It will be a win for everyone in the long term.",
         "nextId": 19,
         "disableNext": false,
         "slider": {},
