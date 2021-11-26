@@ -1,10 +1,10 @@
-import { RESPONSES, ANSWER, TEXT } from "./Constants";
+import { RESPONSES, ANSWER, TEXT, RANGE } from "./Constants";
 import API from "../API";
 
 const Story = [
     {
         "id": 0,
-        "text": "Rick and Morty tumbled out of the portal onto what looks like a hot and deserted beach. As they stand on the coast it's quiet and the wind is dry. Morty turns towards Rick, “Ooo Rick where have you taken us?”. Rick checks his intergalactic map. “Its Earth”, he says, his voice a bit grimmer than usual.",
+        "text": "Rick and Morty tumbled out of the portal onto a hot and deserted beach. As they stood on the coast it's quiet and the wind is dry. Morty turns towards Rick, “Ooo Rick where have you taken us?”. Rick checks his intergalactic map. “Its Earth”, he says, his voice a bit grimmer than usual.",
         "nextId": 0.5,
         "buttons": [],
         "slider": {},
@@ -36,23 +36,24 @@ const Story = [
     },
     {
         "id": 3,
-        "text": "TODO: slider",
+        "text": "Use + to increase your altitute and - to decrease your altitude. ",
         "nextId": 4,
-        "disableNext": false,
+        "disableNext": true,
         "slider": {
-            "start": 1000,
-            "end": 8000,
-            "step": 1000
+            "start": 1000.0,
+            "end": 8000.0,
+            "step": 1000,
+            "condition": "geq"
         },
         "buttons": [],
-        "answer": 5000,
+        "answer": 5000.0,
         "responses": [{ "status": "correct", "id": 4 }, { "status": "incorrect", "id": 108 }]
     },
     {
         "id": 4,
-        "text": "Both Rick & Morty are huffing and puffing by now. Their sight blackened around the periphery of their vision. “Geez Rick, I think we should go back.” “You think Morty? Why do you think you are feeling like this",
+        "text": "Both Rick & Morty are huffing and puffing by now. Their sight blackened around the periphery of their vision. “Geez Rick, I think we should go back.” “You think Morty? Why do you think you are feeling like this?“ Rick asked",
         "nextId": 5,
-        "disableNext": false,
+        "disableNext": true,
         "slider": {},
         "buttons": [{ "id": 1, "value": "1", "disp": "Increased oxygen levels" },
         { "id": 2, "value": "2", "disp": "Decreased oxygen levels" },
@@ -64,7 +65,7 @@ const Story = [
         "id": 5,
         "text": "They descend their balloon and find themselves back on the beach, from a spot different from where they started. Now Morty can you figure out what might have happened to the fishes?",
         "nextId": 6,
-        "disableNext": false,
+        "disableNext": true,
         "slider": {},
         "buttons": [{ "id": 1, "value": "1", "disp": "They died because the fishes flew too high" },
         { "id": 2, "value": "2", "disp": "They didn’t die, they moved somewhere else" },
@@ -75,7 +76,7 @@ const Story = [
     },
     {
         "id": 6,
-        "text": "“How did that happen Rick?”Rick takes out a small brown packet, not bigger than the size of an envelope. It’s filled with something. “Look morty...these… are InstaFood packets. I carry them around in case we get stuck on a planet with no hope of escape. They are the go to food sources for intergalactic travellers like me. All we need to do is add water and food will be ready.” He tears open the top of the packet and fills it with the ocean water. They wait for a couple of minutes but nothing happens.",
+        "text": "“How did that happen Rick?” Rick takes out a small brown packet, not bigger than an envelope. It’s filled with something. “Look Morty...these… are InstaFood packets. I carry them around in case we get stuck on a planet. They are the go to food sources for intergalactic travellers like me. All we need to do is add water and food will be ready.” He tears open the top of the packet and fills it with the ocean water. They wait for a couple of minutes but nothing happens.",
         "nextId": 7,
         "disableNext": false,
         "slider": {},
@@ -83,42 +84,61 @@ const Story = [
     },
     {
         "id": 7,
-        "text": "Rick pulls out his element gun and puts the gun into the food. The display on the gun gives some reading and Rick’s face turns even more dark. “Not good Morty. This water is of no use. To make the food grow we need to fix the water.” Here take this, he hands the gun to Morty. “You already know that there is less oxygen in the water. We need to inject some of it into the water. Don’t put too much oxygen else the packet will catch fire. Luckily we don’t have too many flammable gases around us so no major damage.”",
-        "nextId": 8,
+        "text": "Rick pulls out his element gun and sticks the nozzle of the gun into the food. The display on the gun gives some reading and Rick’s face turns even more dark. “Not good Morty. This water is of no use. To make the food grow we need to fix the water.” Here take this, he hands the gun to Morty. “You already know that there is less oxygen in the water. We need to inject some of it into the water.”",
+        "nextId": 7.5,
         "disableNext": false,
+        "slider": {},
+        "buttons": [],
+    },
+    {
+        "id": 7.5,
+        "text" : "Increase the oxygen concentration by pressing the + and decrease it using -. Press the try it button to check if it's enough.",
         "slider": {
-            "start": 50,
+            "start": 50.0,
             "end": 300,
-            "step": 50
+            "step": 50,
+            "condition": "geq"
         },
-        "buttons": []
+        "buttons": [],
+        "answer": 200,
+        "responses": [{ "status": "correct", "id": 8 }, { "status": "incorrect", "id": 109 }],
+        "nextId":8,
+        "disableNext": true
     },
     {
         "id": 8,
         "text": "“Alright Morty, we still need to do another thing. Apart from the oxygen, the water..the water is too acidic.” Rock says. “Rick, how did the entire ocean water become like this?” asked Morty. “Can you take a guess, Morty? It has to do with another element that is mixed in the water”",
-        "nextId": 9,
-        "disableNext": false,
+        "nextId": 10,
+        "disableNext": true,
         "slider": {},
         "buttons": [{ "id": 1, "value": "1", "disp": "Hydrogen" },
         { "id": 2, "value": "2", "disp": "Nitrogen" },
         { "id": 3, "value": "3", "disp": "Carbon" },
         { "id": 4, "value": "4", "disp": "I don’t know" }],
         "responses": [{ "status": "correct", "id": 104 }, { "status": "incorrect", "id": 105 }],
-        "answer": "1"
+        "answer": "3"
     },
+    // {
+    //     "id": 9,
+    //     "text": "“But Rick, what has acidity in the ocean.” ",
+    //     "nextId": 10,
+    //     "disableNext": false,
+    //     "slider": {},
+    //     "buttons": []
+    // },
     {
-        "id": 9,
-        "text": "“But Rick, what has acidity got to do with carbon.” ",
-        "nextId": 10,
+        "id": 10,
+        "text": "“You see Morty, the ocean is about eight times better at absorbing carbon dioxide than oxygen. We are releasing carbon dioxide into the atmosphere by burning petrol, diesel and coal in our cars and factories. In our timeline, the ocean was absorbing three billion tons of carbon into the atmosphere every year. Before we had all these technologies, before the 1900s the ocean would be releasing carbon dioxide but not anymore.“ Rick explained",
+        "nextId": 80,
         "disableNext": false,
         "slider": {},
         "buttons": []
     },
     {
-        "id": 10,
-        "text": "“You see Morty, the ocean is about eight times better at absorbing carbon dioxide than oxygen. We are releasing carbon dioxide into the atmosphere by burning petrol, diesel and coal in our cars and factories. In our timeline, the ocean was absorbing 3 billion tons of carbon into the atmosphere. Before we had all these technologies, before the 1900s the ocean would be releasing carbon dioxide but not anymore. The carbon dioxide decomposes in the ocean water to release hydrogen from water. Do you know what happens when hydrogen is released?",
+        "id": 80,
+        "text": "“The carbon dioxide decomposes in the ocean water to form cabonic acid and release hydrogen. Do you know what happens when hydrogen is released?“ asked Rick",
         "nextId": 11,
-        "disableNext": false,
+        "disableNext": true,
         "slider": {},
         "buttons": [{ "id": 1, "value": "1", "disp": "Makes water acidic" },
         { "id": 2, "value": "2", "disp": "Makes the color of water dark" },
@@ -129,16 +149,33 @@ const Story = [
     },
     {
         "id": 11,
-        "text": "Just a few weeks ago we had a large storm Morty where you were stuck in your room. This storm washed away plants and other materials into the ocean depositing a large amount of carbon into the ocean in a short amount of time. The acid in the ocean is carbonic acid, the thing you find in sodas”. On queue Rick lets out a big burp.“So the ocean has become a very big soda can?” Morty asks. “Yes you can think of it in that way. Now adjust the dial to remove the acid” Rick says. “Remember Morty, the higher the value on the scale the less acidic it becomes.”",
-        "nextId": 12,
-        "disableNext": false,
+        "text": "The acid in the ocean is carbonic acid, the thing you find in sodas”. On queue Rick lets out a big burp. “So the ocean has become a very big soda can?” Morty asks. “Yes you can think of it in that way. Now adjust the dial to remove the acid” Rick says. “Remember Morty, the higher the value on the scale the less acidic it becomes.”",
+        "nextId": 81,
+        "disableNext": true,
         "slider": {
-            "start": 8,
-            "end": 9,
-            "step": 0.1
+            "start": 8.0,
+            "end": 9.0,
+            "step": 0.1,
+            "condtion": "eq"
         },
-        "responses": [{ "status": "incorrect", "id": 109 }, { "status": "correct", "id": 108 }],
+        "responses": [{ "status": "incorrect", "id": 109 }, { "status": "correct", "id": 110 }],
         "answer": 8.2,
+        "buttons": []
+    },
+    {
+        "id": 81,
+        "text": "“Oh.. Rick how else does carbon get into oceans?“ Morty asked",
+        "nextId":82,
+        "disableNext": false,
+        "slider": {},
+        "buttons": []
+    },
+    {
+        "id": 82,
+        "text": "“You are asking a lot of questions today Morty. But fine I will answer them. Just a few weeks ago we had a large storm Morty where you were stuck in your room. This storm washed away plants and other materials into the ocean dumping a large amount of carbon into the ocean in a short amount of time.“ Rick explained patiently",
+        "nextId":12,
+        "disableNext": false,
+        "slider": {},
         "buttons": []
     },
     {
@@ -167,7 +204,7 @@ const Story = [
     },
     {
         "id": 15,
-        "text": "“So Rick.. you… mean to say that there is one possibility where the earth hasn’t died off?” asks Morty. Rick just nods. “So how do we get to that kind of Earth Rick?”. Well Morty, “there are many ways but because I want to get out of here quickly, I will tell you in a way you can understand. Stop releasing so much carbon dioxide.” With that Rick sets his portal gun to the correct location and time and both of them head out, closing the door to the desolate planet, as alien as any of the other planets they have visited.",
+        "text": "“So Rick.. you… mean to say that there is one possibility where the ocean hasn’t died off?” asks Morty. Rick just nods. “So how do we get to that kind of Earth Rick?”. Well Morty, “there are many ways but because I want to get out of here quickly, I will tell you in a way you can understand. Stop releasing so much carbon dioxide.” With that Rick sets his portal gun to the correct location and time and both of them head out, closing the door to the desolate planet, as alien as any of the other planets they have visited.",
         "nextId": 16,
         "disableNext": false,
         "slider": {},
@@ -175,7 +212,7 @@ const Story = [
     },
     {
         "id": 16,
-        "text": "Epilogue",
+        "text": "End Note",
         "nextId": 17,
         "disableNext": false,
         "slider": {},
@@ -190,15 +227,15 @@ const Story = [
         "buttons": []
     },
     {
-        "id": 17,
+        "id": 18,
         "text": "Individually we can all reduce the carbon we release by making environmental friendly decisions. But we also need to do it on a larger scale by pushing our communities and leaders to make the right decision for the environment. If ever you are in a position to choose, choose the one that ends up releasing less carbon into the atmosphere. It will be a win for everyone in the long term.",
-        "nextId": 18,
+        "nextId": 19,
         "disableNext": false,
         "slider": {},
         "buttons": []
     },
     {
-        "id": 18,
+        "id": 19,
         "text": "Thank you for taking the time in going through this interactive story. I hope it was informative and useful for you.",
         "nextId": -1,
         "disableNext": true,
@@ -240,7 +277,7 @@ const Story = [
     {
         "id": 104,
         "text": "“Good job! You are right Morty”, Rick exclaims",
-        "nextId": 9,
+        "nextId": 10,
         "disableNext": false,
         "slider": {},
         "buttons": []
@@ -248,7 +285,7 @@ const Story = [
     {
         "id": 105,
         "text": "Rick says, “It’s carbon Morty. It’s what makes us and most of the other living things. We are carbon and we can’t live without carbon.”",
-        "nextId": 9,
+        "nextId": 10,
         "disableNext": false,
         "slider": {},
         "buttons": []
@@ -273,6 +310,22 @@ const Story = [
         "id": 108,
         "text": "You haven't gone high enough. Take the balloon higher.",
         "nextId": 4,
+        "disableNext": false,
+        "slider": {},
+        "buttons": []
+    },
+    {
+        "id": 109,
+        "text": "Incorrect value",
+        "nextId": 81,
+        "disableNext": false,
+        "slider": {},
+        "buttons": []
+    },
+    {
+        "id": 110,
+        "text": "”Good work Morty, I knew I could count on you on my adventures.” Rick said.",
+        "nextId": 81,
         "disableNext": false,
         "slider": {},
         "buttons": []
@@ -306,7 +359,20 @@ export const handleDecision = (playerId, storyId, value, nextCallback) => {
 export const handleSlider = (id, value) => {
     const index = getIndexBasedOnId(id);
     const res = Story[index][RESPONSES];
-    const answer = Story[index][ANSWER];
+    const answer = Number(Story[index][ANSWER]).toFixed(1);
+    const condition = Story[index][RANGE]["condition"];
+
+    switch (condition) {
+        case 'eq':
+            return handleEqualCondition(value, answer, res);
+        case 'geq':
+            return handleGreatherThanOrEqualCondition(value, answer, res)
+        default:
+            return handleEqualCondition(value, answer, res);
+    }
+}
+
+const handleEqualCondition = (value, answer, res) => {
     if (value === answer) {
         for (let i = 0; i < res.length; i++) {
             if (res[i]["status"] === "correct") {
@@ -319,7 +385,22 @@ export const handleSlider = (id, value) => {
                 return [false, Story[getIndexBasedOnId(res[i]["id"])][TEXT]]
             }
         }
+    }
+}
 
+const handleGreatherThanOrEqualCondition = (value, answer, res) => {
+    if (value >= answer) {
+        for (let i = 0; i < res.length; i++) {
+            if (res[i]["status"] === "correct") {
+                return [true, res[i]["id"]];
+            }
+        }
+    } else {
+        for (let i = 0; i < res.length; i++) {
+            if (res[i]["status"] !== "correct") {
+                return [false, Story[getIndexBasedOnId(res[i]["id"])][TEXT]]
+            }
+        }
     }
 }
 
