@@ -9,7 +9,6 @@ const Slider = ({ id, range, callback, nextCallback }) => {
     const [text, setText] = useState("");
 
     useEffect(()=> {
-        // console.log("Inside use effect");
         const v = Object.keys(range).length === 0 ? 0 : range.start;
         setValue(()=>v);
     }, [range])
@@ -20,14 +19,16 @@ const Slider = ({ id, range, callback, nextCallback }) => {
 
     const increase = () => {
         if (value < range["end"]) {
-            setValue((value) => value += range.step);
+            setValue((value) => value = (Number(value) + Number(range.step)).toFixed(1));
         }
+        setText("");
     }
 
     const decrease = () => {
         if (value > range["start"]) {
-            setValue((value) => value -= range.step);
+            setValue((value) => value = (Number(value) - Number(range.step)).toFixed(1));
         }
+        setText("");
     }
 
     const reset = () => {
@@ -37,6 +38,7 @@ const Slider = ({ id, range, callback, nextCallback }) => {
     const handleButtonClicked = () => {
         const res = callback(id, value)
         if (res[0]) {
+            setText("");
             nextCallback(res[1]);
         } else {
             setText(res[1]);
@@ -47,7 +49,7 @@ const Slider = ({ id, range, callback, nextCallback }) => {
         <Wrapper>
             <button id="decrement" onClick={()=>decrease()}>-</button>
             <input type="text" placeholder={value} value={value} readOnly/>
-            <button id="incremenet" onClick={()=>increase()}>+</button>
+            <button id="incremenet" onClick={()=>increase()}>+</button> <br/>
             <button id="reset" onClick={()=>reset()}>Reset</button>
             <button id="submit" onClick={handleButtonClicked}>Try it</button>
             <Text>{text}</Text>
