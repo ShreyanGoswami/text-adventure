@@ -1,18 +1,16 @@
 import React from "react";
-import Bleh from "../Bleh";
 
 //Styles
-import { Wrapper, Content } from "./View.styles";
+import { Wrapper, Content, Text } from "./View.styles";
 
 const View = ({text, nextCallback, disableNext}) => {
 
     return (
         <Wrapper>
             <Content>
-                {/* <Text ref={box} onChange={animate}>  */}
-                {/* {text}
-                </Text> */}
-                <Bleh text={text}/>
+                <Text>
+                {text}
+                </Text>
                 <button type="button" onClick={(e)=>nextCallback()} hidden={disableNext}>Next</button>
             </Content>
         </Wrapper>
