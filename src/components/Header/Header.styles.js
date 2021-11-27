@@ -6,13 +6,11 @@ export const Wrapper = styled.div`
     height: 50px;
     padding-top:10px;
     color: var(--lightGrey);
+    display:flex;
 `;
 
 export const Content = styled.div`
-    /* display:flex; */
-    /* align-items: left; */
-    /* background-color: var(--white); */
-    max-width: var(--maxWidth);
-    margin: 0 auto;
     font-size: var(--fontBig);
+    text-align: center;
+    width: 100%;
 `
