@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Wrapper, Text } from "./Slider.styles";
+import { Wrapper, Content, Text } from "./Slider.styles";
 
 const Slider = ({ id, range, callback, nextCallback }) => {
 
@@ -47,12 +47,14 @@ const Slider = ({ id, range, callback, nextCallback }) => {
 
     return (
         <Wrapper>
+            <Content>
             <button id="decrement" onClick={()=>decrease()}>-</button>
             <input type="text" placeholder={value} value={value} readOnly/>
-            <button id="incremenet" onClick={()=>increase()}>+</button> <br/>
+            <button id="incremenet" onClick={()=>increase()}>+</button>
             <button id="reset" onClick={()=>reset()}>Reset</button>
             <button id="submit" onClick={handleButtonClicked}>Try it</button>
             <Text>{text}</Text>
+            </Content>
         </Wrapper>
     )
 }

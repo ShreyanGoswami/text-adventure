@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+
     button {
         margin-left:10px;
         margin-right: 10px;
@@ -13,6 +16,11 @@ export const Wrapper = styled.div`
         border-radius: 20px;
     }
 `;
+
+export const Content = styled.div`
+    /* width: 80%; */
+    align-items: center;
+`
 
 export const Text = styled.div`
 
