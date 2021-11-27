@@ -131,7 +131,7 @@ const Story = [
     },
     {
         "id": 9,
-        "text": "“Rick, how did the entire ocean water become like this?” asked Morty. “Can you take a guess, Morty? It has to do with another element that is mixed in the water”",
+        "text": "“Rick, how did the entire ocean water become like this?” asked Morty. “Can you take a guess, Morty? It has to do with another element that gets mixed in the water.”",
         "nextId": 10,
         "disableNext": true,
         "slider": {},

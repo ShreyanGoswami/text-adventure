@@ -1,5 +1,3 @@
-import './App.css';
-
 import Game from './components/Game'
 import { GlobalStyle } from './GlobalStyle';
 
@@ -8,7 +6,7 @@ function App() {
 
   return (
     <div className="App">
-      <Game playerId={playerId}></Game>
+      <Game class="game" playerId={playerId}></Game>
       <GlobalStyle></GlobalStyle>
     </div>
   );

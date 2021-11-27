@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
     animation: loadingAnimation 2s;
-
     h2 {
         margin: 0px;
         padding-top: 20px;
