@@ -22,5 +22,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         color: var(--white);
+
+        background-color: var(--palette-color-body-1);
     }
 `
