@@ -34,8 +34,7 @@ export const Text = styled.div`
     padding-bottom:20px;
     word-wrap: break-word;
     width: 80%;
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
 
     @media screen and (max-width: 768px) {
         font-size: var(--fontMed);

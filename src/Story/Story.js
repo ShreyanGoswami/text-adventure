@@ -160,7 +160,15 @@ const Story = [
     },
     {
         "id": 10,
-        "text": "“Morty, the ocean is about eight times better at absorbing carbon dioxide than oxygen. We are releasing carbon dioxide into the atmosphere by burning petrol, diesel and coal in our cars and factories. In our timeline, the ocean was absorbing three billion tons of carbon dioxide from the atmosphere every year. Before the 1900s the ocean would be releasing carbon dioxide but not anymore. Not after we invented cars, aeroplanes and factories“ Rick explained",
+        "text": "“Morty, the ocean is about eight times better at absorbing carbon dioxide than oxygen. We are releasing carbon dioxide into the atmosphere by burning petrol, diesel and coal in our cars and factories.",
+        "nextId": 10.4,
+        "disableNext": false,
+        "slider": {},
+        "buttons": []
+    },
+    {
+        "id": 10.4,
+        "text": "In our timeline, the ocean was absorbing three billion tons of carbon dioxide from the atmosphere every year. Before the 1900s the ocean would be releasing carbon dioxide but not anymore. Not after we invented cars, aeroplanes and factories“ Rick explained",
         "nextId": 10.5,
         "disableNext": false,
         "slider": {},
@@ -189,7 +197,16 @@ const Story = [
     },
     {
         "id": 11,
-        "text": "The acid in the ocean is carbonic acid, the thing you find in sodas”. On queue Rick lets out a big burp. “When the ocean becomes acidic it harms most of the life in the oceans.“ Rick added. “So the ocean has become a very big soda can?” Morty asks. “Yes you can think of it in that way. Now adjust the dial to remove the acid” Rick says. “Remember Morty, the higher the value on the scale the less acidic it becomes. But don't set it too high as then the water will become less acidic.”",
+        "text": "The acid in the ocean is carbonic acid, the thing you find in sodas”. On queue Rick lets out a big burp. “When the ocean becomes acidic it harms most of the life in the oceans.“ Rick added.",
+        "nextId": 11.5,
+        "disableNext": false,
+        "slider": {},
+        "responses": [],
+        "buttons": []
+    },
+    {
+        "id": 11.5,
+        "text": "“So the ocean has become a very big soda can?” Morty asks. “Yes you can think of it in that way. Now adjust the dial to remove the acid” Rick says. “Remember Morty, the higher the value the less acidic it becomes. Don't set it too high as then the water will become less acidic.”",
         "nextId": 81,
         "disableNext": true,
         "slider": {
@@ -220,7 +237,15 @@ const Story = [
     },
     {
         "id": 12,
-        "text": "“Now Morty, imagine what we did for the water in this packet for the entire ocean,” says Rick. “Gee Rick we will need a very big element gun.” Morty says in a bit of wonder. “Yeah we might have to rob an entire planet of their resources to clean our oceans.” Rick takes the packet from Morty and empties its contents.”Rick what was that for?!” “Oh we can’t eat that thing Morty, inedible for most humans, I got used to it. Its poison for you Morty”. “Just like the ocean water?” Morty asks",
+        "text": "“Now Morty, imagine what we did for the water in this packet for the entire ocean,” says Rick. “Gee Rick we will need a very big element gun.” Morty says in a bit of wonder. “Yeah we might have to rob an entire planet of their resources to clean our oceans.”",
+        "nextId": 12.5,
+        "disableNext": false,
+        "slider": {},
+        "buttons": []
+    },
+    {
+        "id": 12.5,
+        "text": "Rick takes the packet from Morty and empties its contents.”Rick what was that for?!” “Oh we can’t eat that thing Morty, inedible for most humans, I got used to it. Its poison for you Morty”. “Just like the ocean water?” Morty asks",
         "nextId": 13,
         "disableNext": false,
         "slider": {},
@@ -228,7 +253,7 @@ const Story = [
     },
     {
         "id": 13,
-        "text": "“Yes, just like the ocean..ocean water. Come on, I have had enough of this Morty, let’s get back.” Rick says his shoulders are a bit more slumped than usual. “But wait Rick,if this is the future, why go back at all?” ",
+        "text": "“Yes, just like the ocean..ocean water. Come on, I have had enough of this Morty, let’s get back.” Rick says, his shoulders are a bit more slumped than usual. “But wait Rick,if this is the future, why go back at all?” ",
         "nextId": 14,
         "disableNext": false,
         "slider": {},
@@ -244,7 +269,15 @@ const Story = [
     },
     {
         "id": 15,
-        "text": "“So Rick.. you… mean to say that there is one possibility where the ocean hasn’t died off?” asks Morty. Rick just nods. “So how do we get to that kind of Earth Rick?”. Well Morty, “there are many ways but because I want to get out of here quickly, I will tell you in a way you can understand. Stop releasing so much carbon dioxide.” With that Rick sets his portal gun to the correct location and time and both of them head out, closing the door to the desolate planet, as alien as any of the other planets they have visited.",
+        "text": "“So Rick.. you… mean to say that there is one possibility where the ocean hasn’t died off?” asks Morty. Rick just nods. “So how do we get to that kind of Earth Rick?”. Well Morty, “there are many ways but because I want to get out of here quickly, I will tell you in a way you can understand. Stop releasing so much carbon dioxide.”",
+        "nextId": 15.5,
+        "disableNext": false,
+        "slider": {},
+        "buttons": []
+    },
+    {
+        "id": 15.5,
+        "text": "With that Rick sets his portal gun to the correct location and time and both of them head out, closing the door to the desolate planet, as alien as any of the other planets they have visited.",
         "nextId": 16,
         "disableNext": false,
         "slider": {},
@@ -260,7 +293,15 @@ const Story = [
     },
     {
         "id": 17,
-        "text": "The oceans are doing a lot of heavy lifting, absorbing the carbon dioxide and reducing keeping global warming in check. In this process they are becoming more acidic. The increased temperature releases oxygen from the oceans. There is also the potential for oceans to release carbon dioxide back into the atmosphere increasing global temperatures. Scientists estimate that if nothing is done then in another 100 years the temperatures would rise by four degrees or more globally.",
+        "text": "The oceans are doing a lot of heavy lifting, absorbing the carbon dioxide and reducing keeping global warming in check. In this process they are becoming more acidic. The increased temperature releases oxygen from the oceans.",
+        "nextId": 17.5,
+        "disableNext": false,
+        "slider": {},
+        "buttons": []
+    },
+    {
+        "id": 17.5,
+        "text": "There is the potential for oceans to release carbon dioxide back into the atmosphere increasing global temperatures. Scientists estimate that if nothing is done then in another 100 years the temperatures would rise by four degrees or more globally.",
         "nextId": 18,
         "disableNext": false,
         "slider": {},
@@ -268,7 +309,7 @@ const Story = [
     },
     {
         "id": 18,
-        "text": "Individually we can all reduce the carbon we release by making environmental friendly decisions. But that is not enough. We need to do it on a larger scale by pushing our communities and leaders to make the right decision for the environment. If ever you are in a position to choose, choose the one that ends up releasing less carbon into the atmosphere. It will be a win for everyone in the long term.",
+        "text": "Individually we can all reduce the carbon we release by making environmental friendly decisions. But that is not enough. We need to do it on a larger scale by pushing our communities and leaders to make the right decision for the environment. If ever you are in a position to choose, choose the one that ends up releasing less carbon into the atmosphere.",
         "nextId": 19,
         "disableNext": false,
         "slider": {},

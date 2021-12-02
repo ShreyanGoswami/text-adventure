@@ -21,4 +21,9 @@ export const Content = styled.div`
     .text {
         margin-bottom: 50px;
     }
+
+    @media screen and (max-width: 410px) {
+        margin-left: 28px;
+        margin-right: 28px;
+    }
 `;
