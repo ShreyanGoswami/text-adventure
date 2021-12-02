@@ -12,8 +12,16 @@ const Story = [
     },
     {
         "id": 0.5,
+        "nextId": 0.7,
+        "text": "“But..but Rick this can’t be earth. It’s way too hot!”, Morty exclaims.“Its earth alright” says Rick handing Morty the map. “We were supposed to travel a hundred light years away from earth but it looks like I set the setting to hundred years away”. A rookie mistake. ",
+        "buttons": [],
+        "slider": {},
+        "disableNext": false
+    },
+    {
+        "id": 0.7,
         "nextId": 1,
-        "text": "“But..but Rick this can’t be earth. It’s way too hot!”, Morty exclaims.“Its earth alright” says Rick handing Morty the map. “We were supposed to travel a hundred light years away from earth but it looks like I set the setting to hundred years away”. A rookie mistake. While Morty tries to read the intergalactic map, Rick thinks it's a good time to teach Morty a little bit of science.",
+        "text": "While Morty tries to read the intergalactic map, Rick thinks it's a good time to teach Morty a little bit of science.",
         "buttons": [],
         "slider": {},
         "disableNext": false
@@ -28,10 +36,18 @@ const Story = [
     },
     {
         "id": 2,
-        "text": "“But Rick..how..can that be?” Morty asks. Rick gives Morty one of his mischievous smiles and says, “Let me show you”. He takes out a cube, around three inches in each dimension and drops it onto the sandy beach. He presses a button on the cube and it transforms into a hot air balloon. “Let’s get in Morty”. “Oh Rick, I don’t like the looks of this.” Morty says in his usual hesitant demeanor. “We..We..We will be fine Morty, you can control the balloon.” ",
-        "nextId": 3,
+        "text": "“But Rick..how..can that be?” Morty asks. Rick gives Morty one of his mischievous smiles and says, “Let me show you”. He takes out a cube, around three inches in each dimension and drops it onto the sandy beach. He presses a button on the cube and it transforms into a hot air balloon. ",
+        "nextId": 2.5,
         "disableNext": false,
         "slider": {},
+        "buttons": []
+    },
+    {
+        "id": 2.5,
+        "nextId": 3,
+        "text": "“Let’s get in Morty”. Rick said, confidently walking towards the balloon. “Oh Rick, I don’t like the looks of this.” Morty says in his usual hesitant demeanor. “We..We..We will be fine Morty, you can control the balloon.”",
+        "disableNext":false,
+        "slider":{},
         "buttons": []
     },
     {
