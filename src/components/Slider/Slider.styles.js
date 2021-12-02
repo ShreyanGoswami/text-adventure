@@ -18,11 +18,14 @@ export const Wrapper = styled.div`
 `;
 
 export const Content = styled.div`
-    /* width: 80%; */
     align-items: center;
 `
 
 export const Text = styled.div`
-
+    margin-top:30px;
+    @media screen and (max-width: 768px) {
+        font-size: var(--fontMed);
+        padding-left: 10px;
+    }
 `;
 

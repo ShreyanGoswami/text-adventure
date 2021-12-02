@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
     background: var(--darkGrey);
     padding: 0 20px;
-    height: 50px;
+    height: 40px;
     padding-top:10px;
     color: var(--lightGrey);
     display:flex;
