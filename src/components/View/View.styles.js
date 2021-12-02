@@ -36,4 +36,8 @@ export const Text = styled.div`
     width: 80%;
     text-align: justify;
     text-justify: inter-word;
+
+    @media screen and (max-width: 768px) {
+        font-size: var(--fontMed);
+    }
 `

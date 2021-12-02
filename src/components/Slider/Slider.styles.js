@@ -23,6 +23,9 @@ export const Content = styled.div`
 `
 
 export const Text = styled.div`
-
+    @media screen and (max-width: 768px) {
+        font-size: var(--fontMed);
+        padding-left: 10px;
+    }
 `;
 
