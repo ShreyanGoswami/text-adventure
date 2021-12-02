@@ -13,4 +13,8 @@ export const Content = styled.div`
     font-size: var(--fontBig);
     text-align: center;
     width: 100%;
+
+    @media screen and (max-width: 768px) {
+        font-size: var(--fontMed);
+    }
 `
