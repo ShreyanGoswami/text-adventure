@@ -92,15 +92,23 @@ const Story = [
     },
     {
         "id": 6,
-        "text": "“How did that happen Rick?” Rick takes out a small brown packet, not bigger than an envelope. It’s filled with something. “Look Morty...these… are InstaFood packets. I carry them around in case we get stuck on a planet. They are the go to food sources for intergalactic travellers like me. All we need to do is add water and food will be ready.” He tears open the top of the packet and fills it with the ocean water. They wait for a couple of minutes but nothing happens.",
+        "text": "“How did that happen Rick?” Rick takes out a small brown packet, not bigger than an envelope. It’s filled with something. “Look Morty...these… are InstaFood packets. I carry them around in case we get stuck on a planet. They are the go to food sources for intergalactic travellers like me. All we need to do is add water and food will be ready.”",
+        "nextId": 6.5,
+        "disableNext": false,
+        "slider": {},
+        "buttons": []
+    },
+    {
+        "id": 6.5,
         "nextId": 7,
+        "text": "Rick tears open the top of the packet and fills it with the ocean water. They wait for a couple of minutes but nothing happens.",
         "disableNext": false,
         "slider": {},
         "buttons": []
     },
     {
         "id": 7,
-        "text": "Rick pulls out his element gun and sticks the nozzle of the gun into the food. The display on the gun gives some reading and Rick’s face turns even more dark. “Not good Morty. This water is of no use. To make the food grow we need to fix the water.” Here take this, he hands the gun to Morty. “You already know that there is less oxygen in the water. We need to inject some of it into the water.”",
+        "text": "Rick pulls out his element gun and sticks the nozzle of the gun into the food. The display on the gun gives some reading and Rick’s face turns dark. “Not good Morty. This water is of no use. To make the food grow we need to fix the water.” Here take this, he hands the gun to Morty. “You already know that there is less oxygen in the water. We need to inject some of it into the water.”",
         "nextId": 7.5,
         "disableNext": false,
         "slider": {},
